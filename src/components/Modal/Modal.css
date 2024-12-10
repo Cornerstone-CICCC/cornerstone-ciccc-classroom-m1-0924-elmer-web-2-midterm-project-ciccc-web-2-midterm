@@ -1,0 +1,126 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+
+  .modal-content {
+    position: relative;
+    background: black;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 60%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    color: #bbbbbb;
+
+    .video-container {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      max-width: 1000px;
+      height: 100%;
+      max-height: 600px;
+      overflow: hidden;
+      margin: 0 auto;
+
+      iframe {
+        margin: 0 auto;
+        width: 1200px;
+        height: 700px;
+        margin-top: -130px;
+      }
+    }
+
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #444;
+      padding-bottom: 0.5rem;
+      color: rgb(228, 226, 226);
+    }
+
+    .overview {
+      font-size: 1.2rem;
+      margin: 1rem 0;
+      line-height: 1.6;
+    }
+
+    .release-date, .rating {
+      font-size: 1rem;
+      margin: 0.5rem 0;
+    }
+
+    .rating span {
+      margin-left: 0.5rem;
+      font-size: 1.2rem;
+      color: #ffcc00;
+    }
+
+    .modal-close {
+      color: white;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: none;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+  }
+}
+
+.modal-content.light {
+  background: white;
+  color: black;
+
+  .modal-close {
+    color: black;
+  }
+
+  h2 {
+    color: black;
+  }
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    .video-container {
+      height: 200px !important;
+
+      iframe {
+        margin-top: -250px !important;
+      }
+    }
+  }
+}
+
+@media (max-width: 430px) {
+  .modal-content {
+    width: 80% !important;
+    height: 70% !important;
+
+    .video-container {
+      height: 200px !important;
+
+      iframe {
+        margin-top: -250px !important;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem !important;
+    }
+
+    p {
+      font-size: 1rem !important;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.footer-container {
+  width: 100%;
+  background: black;
+  color: white;
+
+  .footer-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+}
+
+.footer-container.light {
+  background: white;
+  color: black;
+}

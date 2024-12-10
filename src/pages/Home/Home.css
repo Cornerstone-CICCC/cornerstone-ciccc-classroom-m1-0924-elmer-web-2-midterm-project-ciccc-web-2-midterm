@@ -1,0 +1,66 @@
+.movies-container {
+  padding-top: 15vh;
+  background: black;
+  color: white;
+  text-align: center;
+
+  .genre-name {
+    font-size: 40px;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #444;
+    padding-bottom: 0.5rem;
+    color: rgb(228, 226, 226);
+  }
+
+  .movies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .movie {
+      margin: 30px;
+      padding: 10px;
+      width: 220px;
+    
+      .vote-average {
+        color: #494949;
+        position: relative;
+    
+        svg {
+          position: absolute;
+          top: -20px;
+          right: -23px;
+          stroke: black;
+          stroke-width: 0.5;
+        }
+    
+        p {
+          position: absolute;
+          top: -10px;
+          right: 0px;
+          font-weight: bold;
+        }
+      }
+    
+      img {
+        border: 10px solid #494949;
+        border-radius: 30px;
+      }
+    
+      .movie-info {
+        width: 200px;
+        text-align: center;
+      }
+    }
+  }
+}
+
+.movies-container.light {
+  background: white;
+  color: black;
+
+  .genre-name {
+    color: black;
+  }
+}
+
