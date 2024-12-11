@@ -1,0 +1,384 @@
+*{
+
+margin: 0;
+box-sizing: border-box;
+outline: none;
+}
+
+body {
+color: white;
+font-family: "microsoft yahei", arial,
+  "segoe ui", roboto, oxygen, cantarell, "helvetica neue", ubuntu, sans-serif;
+background-image: url(../movies.png.jpg);
+z-index: 0;
+
+}
+
+
+.btn {
+color: white;
+cursor: pointer;
+text-decoration: none;
+padding: 6px 8px;
+border: 1px solid rgba(255, 255, 255, 0.5);
+transition: inherit;
+}
+
+.btn:hover {
+background: #fffbfb;
+border-color: #06c3dd;
+color: red;
+}
+
+.row {
+display: flex;
+max-width: 1200px;
+gap: 15px;
+flex-direction: row;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.wrapper {
+width: 100%;
+min-height: 100vh;
+padding: 15px 0;
+display: flex;
+justify-content: flex-start;
+align-items: center;
+flex-direction: column;
+z-index: 0;
+}
+
+.wrapper .card {
+position: relative;
+font-size: 14px;
+line-height: 21px;
+width: 285px;
+height: 360px;
+overflow: hidden;
+transition: 0.5s ease all;
+border-radius: 12px;
+}
+
+.wrapper .card .card-content {
+width: 100%;
+position: absolute;
+bottom: 0;
+left: 0;
+padding: 50px 10px 7px;
+background-image: linear-gradient(
+  180deg,
+  rgba(51, 55, 69, 0),
+  rgba(16, 21, 40, 0.95)
+);
+transition: inherit;
+}
+
+.wrapper .card .card-content .card-cont-header {
+padding: 8px 0;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.wrapper .card .card-content .describe {
+max-height: 0;
+opacity: 0;
+border-top: 1px solid rgba(255, 255, 255, 0.1);
+overflow: hidden;
+transition: inherit;
+}
+
+.wrapper .card .card-content span{
+font-size: 12px;
+}
+
+.wrapper .card:hover {
+cursor: pointer;
+transform: scale(1.05);
+}
+
+.wrapper .card:hover .card-content {
+background-image: linear-gradient(180deg, rgba(51, 55, 69, 0) 0, #101528 48%);
+}
+
+.wrapper .card:hover .btn {
+background: rgba(16, 21, 40, 0.95);
+border-radius: 0 8px 0 8px;
+}
+
+.wrapper .card:hover .describe {
+max-height: 200px;
+padding: 8px 0;
+opacity: 1;
+}
+
+.search-block {
+width: 100% !important;
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
+align-items: center;
+margin-bottom: 15px;
+padding: 25px 50px;
+padding: 25px 50px;
+background: linear-gradient(to right, #b30000,   #b30000,#880202, #000000f5);
+justify-content: center;
+align-content: center;
+padding-top: 90px;
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    background: linear-gradient(to right, #b30000, #b30000, #880202, #000000f5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    transition: 1s;
+}
+
+ 
+.Sidebar ul  {
+        display: flex;
+        list-style-type: none;
+        font-size: 30px;
+        padding-top:px ;
+        padding: 0px;
+        transition: 1s ease-in;
+        border-radius: 15%;
+        justify-content: center;
+margin-bottom: 100px;
+     }
+
+
+
+
+     .Sidebar ul:hover{
+        background: linear-gradient(to bottom, #b30000,   #b30000,#880202, #000000f5);
+        transition: 1s ;
+
+     }
+
+.Sidebar{
+    background: linear-gradient(to bottom, #b30000, #b30000, #000000);
+     width: 125px;
+     height: 100%;
+     position:fixed;
+     padding-top:50px;
+     top: 0;
+     transition: 1s ;
+     z-index: 1;
+    gap: 100px;
+
+}
+    
+     
+    
+
+.search-block #search-form {
+    display: flex;
+    width: 520px;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    scale: 1.5;
+}
+
+.search-block input {
+width: 100%;
+max-width: 400px;
+padding: 15px;
+border-radius: 15px 0 0 15px;
+border: none;
+background: rgba(255, 255, 255, 0.75);
+}
+
+.search-block .btn {
+width: 120px;
+background: rgba(44, 2, 104, 0.25);
+border-radius: 0 15px 15px 0;
+border: none;
+}
+
+.search-block .btn:hover {
+background: rgba(245, 1, 1, 0.5);
+color: rgb(255, 255, 255);
+}
+
+.btn-load {
+background-color: skyblue;
+padding: 10px 25px;
+border: none;
+margin-top: 15px;
+}
+
+a {
+color: white;
+text-decoration: none;
+}
+.Container{
+    display: flex;
+    justify-content: flex-end;
+}
+#changeTheme{
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    width: 30px;
+    height: 30px;
+    color: black;
+    position: absolute;
+
+}
+#changeTheme img{
+    z-index: 3;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+}
+#changeTheme img:hover{
+scale: 1.2;
+}
+
+
+.Main{
+    display: flex;
+    justify-content: center;
+
+
+}
+
+#About {
+    display: flex;
+    width:800px;
+    height: auto;
+    margin: 0px;
+    color: white;
+    z-index: 1;
+    margin: 20px;
+    border-radius: 10px;
+    justify-content: center;
+    padding: 0px;
+    font-size: 24px;
+    flex-wrap: wrap;
+}
+.Badges img{
+    width: 300px;
+    height: 300px;
+    padding-top: 64px;
+}
+.Badges{
+    display: flex;
+    justify-content: center;
+    padding-top: 300px;
+    width: 10px;
+    height: 10px;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+@media (max-width: 1377px) {
+    #About {
+        display: flex;
+        width:400px;
+        height: auto;
+        margin: 0px;
+        color: white;
+        z-index: 1;
+        margin: 20px;
+        border-radius: 10px;
+        justify-content: center;
+        padding: 0px;
+        font-size: 24px;
+        flex-wrap: wrap;
+    }
+    .Badges{
+        display: flex;
+        justify-content: center;
+        padding-top: 300px;
+        width: 10px;
+        height: 10px;
+        justify-content: flex-end;
+        align-content: space-between;
+        flex-direction: row;
+        flex-wrap: nowrap
+    }
+
+    .Badges img{
+        width: 200px;
+        height: 200px;
+        padding-top: 64px;
+    }
+    .Sidebar {
+      width: 115px;
+    padding-top: 80px;
+    }
+    .row{
+        display: flex;
+        justify-content: flex-end;
+        
+
+
+    }
+    .Sidebar ul{
+        font-size: 20px;
+    }
+    .search-block #search-form{
+        scale: 0.5;
+    }
+    .search-block {
+
+        padding-top: 40px;
+
+    }
+    .wrapper .card {
+       
+        width: 206px;
+        height: 215px;
+    }
+       
+  }
+
+  /* Dark mode Settings*/
+
+  .Sidebar-Dark-mode {
+    background: #ffffff;
+    color: black;
+}
+#Nav-light-mode  {
+    color: black;
+
+}
+.Sidebar-light-mode ul li a {
+    color: #000; 
+    text-decoration: none;
+}
+.Sidebar-light-mode ul:hover {
+    background: linear-gradient(to bottom, #ffffff,   #ffffff,#f8ebb0, #f7a8a8f5);
+}
+
+
+.logo-light {
+    background: white;
+    color: black;
+    transition: 1s;
+
+}
+.logo-light h1{
+    color: black;
+    transition: 1s;
+
+}
+
+
+.search-block .btn-Dark-mode {
+    background: white; 
+    color: black;
+    
+}
